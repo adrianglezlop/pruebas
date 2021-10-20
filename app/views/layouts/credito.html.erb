@@ -55,6 +55,49 @@
       });
       $scope.block =true;
     }
+    .controller("solic_vale",["$scope","$http","$location",function($scope,$http,$location){
+    $scope.credito="";
+    $scope.block=false;
+    $scope.paices = [];
+    $scope.estados =[];
+    $scope.cuidades = [];
+    $scope.url = location.protocol + '//' + location.host + location.pathname;
+    $("#solo_en_new").hide();
+    $("#errores").hide();
+    var longitud = $scope.url.split("/").length
+    $('#autorelleno').hide();
+    if (($scope.url.split("/")[longitud-1]==="edit")){
+      console.log($scope.url.split("/",longitud-1).join("/")+".json");
+      $http.get($scope.url.split("/",longitud-1).join("/")+".json")
+      .success(function(data){
+          $scope.credito=data;
+          ajuste_credito();
+          console.log( $scope.credito);
+      })
+      .error(function(data){
+          console.log(data);
+      });
+      $("#solo_en_new").show();
+    }else if($scope.url.split("/")[longitud-1]==="new"){
+      $("#solo_en_new").show();
+      $("#pdfs").hide();
+    }else if($scope.url.split("/")[longitud-1]==="credits"){
+      $("#solo_en_new").show();
+      $("#errores").show();
+      $("#pdfs").hide();
+    }else{
+      console.log($scope.url.split("/",longitud-1).join("/")+".json");
+      $http.get($scope.url.split("/",longitud).join("/")+".json")
+      .success(function(data){
+          $scope.credito=data;
+          ajuste_credito();
+          console.log( $scope.credito);
+      })
+      .error(function(data){
+          console.log(data);
+      });
+      $scope.block =true;
+    }
     function ajuste_credito(){
       console.log("cambio"+$scope.credito.fecha_de_nacimiento_conyuge);
       $scope.credito.fecha_de_nacimiento=$scope.credito.fecha_de_nacimiento+"";
