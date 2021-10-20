@@ -32,18 +32,18 @@
 
 <p style="color:red; font-size: 36px; font-weight: bold">FINANCIERA MARJO</p> -->
 
-<div ng-controller="solicitud" >
+<div ng-controller="solic_vale" >
   <div id="errores" style="background-color:#f0f0ff;border-size:2px;border-style:solid;z-index:99;overflow-y: scroll;">
     <div>
       
-      <%= form_for @credit,class:"father" do |f| %>
+      <%= form_for @vale,class:"father" do |f| %>
       
-    <% if @credit.errors.any? %>
+    <% if @vale.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@credit.errors.count, "error") %> prohibited this credit from being saved:</h2>
+        <h2><%= pluralize(@vale.errors.count, "error") %> prohibited this credit from being saved:</h2>
   
         <ul>
-        <% @credit.errors.full_messages.each do |message| %>
+        <% @vale.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
         </ul>
@@ -64,7 +64,7 @@
   
   
   
-  <input type="hidden" value = "<%= @credit.to_json%>" ng-model="credito" ng-init="credito  = <%= @credit.to_json%>">
+  <input type="hidden" value = "<%= @vale.to_json%>" ng-model="credito" ng-init="credito  = <%= @vale.to_json%>">
       
      
   
@@ -683,9 +683,9 @@
         </div>
       </div>
       <%if @retorno == "2"%>
-          <%= link_to 'ATRAS', "/customers/#{@credit.customer_id}/historial",class:"waves-effect waves-light btn" %>
+          <%= link_to 'ATRAS', "/customers/#{@vale.customer_id}/historial",class:"waves-effect waves-light btn" %>
       <%else%>
-          <a href="/view_credits">Atras</a>
+          <a href="/view_vales">Atras</a>
       <%end%>
 
 
