@@ -4,6 +4,11 @@
       <li><%= link_to 'Por aceptar', view_credits_path%></li>
       <li><%= link_to 'Aceptados', view_credits_aceptadas_path%></li>
       <li><%= link_to 'Rechazado', view_credits_rechazadas_path%></li>
+      
+      <li class="item sep" onclick="mostrar(1)"> <img alt=""/> Portátil </li>                     
+    <li class="item sep"  onclick="mostrar(2)" > <img alt=""/> Móvil </li>                      
+    <li class="item sep"> <img alt=""/> Repetidores </li>   
+      
     </ul>
     <ul id="dropdown2_2" class="dropdown-content">
       <li><%= link_to 'Configuraciones', Conf.last%></li>
