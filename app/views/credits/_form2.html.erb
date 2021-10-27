@@ -76,7 +76,14 @@
           <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
         </p>
       </div>
-       
+      
+      
+      <div style="top:0px;left:200px;position:absolute;">
+        <p>
+          <%= f.radio_button  :cred_o_vale,1,"ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%> 
+          <%= f.radio_button  :credvale,0,checked:true,:style=>"left:230px;top:0px;position:absolute;","ng-model":"credito.es_cliente","ng-change":"focus_curp()","ng-disabled":"block"%>
+        </p>
+      </div>
       
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br>
