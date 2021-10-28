@@ -41,9 +41,20 @@
           <%= f.radio_button  :es_cliente,false,:style=>"left:77px;top:16px;position:absolute;" %> 
         </p>
       </div>
+      
       <div>
         <%= f.text_field :como_se_entero,:style=>"left:705px;top:138px;width:350px;position:absolute;"%>
       </div>
+    </div>
+    
+    <div class="row">
+      <div style="position:absolute;top:50px;left:150px;">
+        <p>
+          <%= f.radio_button  :cred_o_vale,true,checked:true%> 
+          <%= f.radio_button  :cred_o_vale,false,:style=>"left:50px;top:16px;position:absolute;" %> 
+        </p>
+      </div>
+
     </div>
       <div  style="position:absolute;top:156px;left:645px;">
         <p>
