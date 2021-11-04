@@ -183,15 +183,16 @@
     }
    
    $scope.vale = function(){
-      $scope.tipo="";
+      $scope.tipox="";
       $scope.valecred=[];
       if($scope.credito.vale==0)
       {
-        $scope.tipo="Cred";
+        $scope.tipox="Cred";
         
-      }else if ($scope.credito.agente_empresa==0){
-        $scope.tipo="Vale";
+      }else if ($scope.credito.vale==0){
+        $scope.tipox="Vale";
       }
+      alert(tipox);
     }
    
     $scope.buscarCliente=function(val){
