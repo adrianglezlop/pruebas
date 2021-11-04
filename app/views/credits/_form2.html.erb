@@ -105,6 +105,7 @@
         <%= f.text_field :fecha, class:"datepicker", class:"cerrar_bloquear",type:"date", autocomplete: "off",:style=>"left:960px;top:115px;position:absolute;" %>
       </div>
     </div>
+    
     <div class="row">
       <div style="position:absolute;top:127px;left:360px;">
         <p>
@@ -115,19 +116,8 @@
       <div>
         <%= f.text_field :como_se_entero,:style=>"left:705px;top:146px;width:350px;position:absolute;","ng-model":"credito.como_se_entero","ng-disabled":"block"%>
       </div>
-      <div class="row">
-      <div style="position:absolute;top:1px;left:260px;">
-        <p>
-          <%= f.radio_button  :cred_o_vale,0%> 
-          <%= f.radio_button  :cred_o_vale,0,checked:true,:style=>"left:77px;top:5px;position:absolute;"%>
-        </p>
-      </div>
-      <div>
-        <%= f.text_field :como_se_entero,:style=>"left:705px;top:146px;width:350px;position:absolute;","ng-model":"credito.como_se_entero","ng-disabled":"block"%>
-      </div>
     </div>
-      
-    </div>
+    
       <div  style="position:absolute;top:157px;left:654px;">
         <p>
           <%= f.radio_button  :familiar_con_prestamo,1,checked:true,"ng-model":"credito.familiar_con_prestamo","ng-disabled":"block"%> 
