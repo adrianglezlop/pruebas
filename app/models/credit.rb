@@ -61,6 +61,7 @@ class Credit < ActiveRecord::Base
     :destination_id,
     :customer_id,
     :profecion_id,
+    :vale,
     presence: true
     before_save :default_values
     after_save :pdf_trans
