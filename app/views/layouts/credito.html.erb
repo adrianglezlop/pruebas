@@ -182,20 +182,7 @@
       }
     }
    
- 
-   $scope.vale = function(){
-      $scope.tipox="";
-      $scope.valecred=[];
-      if($scope.credito.credvale==0)
-      {
-        $scope.tipox="C";
-        
-      }else if ($scope.credito.credvale==1){
-        $scope.tipox="V";
-      }
-    }
 
-   
     $scope.buscarCliente=function(val){
       var query="/customers.json?"
       if($scope.credito.CURP!=""&&$scope.credito.CURP!=null)
