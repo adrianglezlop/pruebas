@@ -78,8 +78,8 @@
       </div>
       
       <div style="top:0px;left:125px;position:absolute;">
-          <%= f.radio_button  :vale,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.vale" ,"ng-disabled":"block"%>
-          <%= f.radio_button  :vale,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.vale","ng-disabled":"block"%>
+          <%= f.radio_button  :vale,1,checked:true,"value":true,"ng-model":"credito.credvale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_true", "Credito" %>
+          <%= f.radio_button  :vale,0,"ng-model":"credito.credvale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
       </div>
       
       
